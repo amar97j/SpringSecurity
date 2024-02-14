@@ -1,9 +1,8 @@
 package com.example.SpringBootProject.entitiy;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import com.example.SpringBootProject.enums.SuggestionStatus;
+
+import javax.persistence.*;
 
 @Entity
 public class GuestSuggestionEntity {
@@ -12,6 +11,9 @@ public class GuestSuggestionEntity {
     private Long id;
     private int rate;
     private String suggestionText;
+
+    @Enumerated(EnumType.STRING)
+    private SuggestionStatus status;
 
 
     public Long getId() {
