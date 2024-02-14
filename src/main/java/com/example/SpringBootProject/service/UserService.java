@@ -7,12 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.transaction.Transactional;
 
-@Service
+
 public interface UserService {
 //    void signup(UserEntity userDTO);
 
     @Autowired
-    private UserRepository userRepository;
+    UserRepository userRepository = null;
 
     @Transactional
     public default void updateProfile(UserEntity userProfileDTO) {
@@ -28,5 +28,7 @@ public interface UserService {
 
         }
     }
+
+    void signup(UserEntity user);
 }
 
