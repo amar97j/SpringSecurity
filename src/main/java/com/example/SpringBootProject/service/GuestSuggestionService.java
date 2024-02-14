@@ -34,6 +34,19 @@ public class GuestSuggestionService {
         return repository.findAllDistinctBySuggestionText();
     }
 
+
+    public List<GuestSuggestionEntity> getCreateStatusSuggestions() {
+        return repository.findByStatus(SuggestionStatus.CREATE);
+    }
+
+    public List<GuestSuggestionEntity> getRemoveStatusSuggestions() {
+        return repository.findByStatus(SuggestionStatus.REMOVE);
+    }
+
+
+
+
+
 }
 
 

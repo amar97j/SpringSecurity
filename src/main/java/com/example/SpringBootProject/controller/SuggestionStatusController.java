@@ -28,4 +28,6 @@ public class SuggestionStatusController {
     public List<GuestSuggestionEntity> getUniqueSuggestions() {
         return suggestionService.findAllUniqueSuggestions();
     }
+
+
 }

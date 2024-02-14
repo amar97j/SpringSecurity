@@ -12,6 +12,8 @@ public class GuestSuggestionEntity {
     private int rate;
     private String suggestionText;
 
+
+
     @Enumerated(EnumType.STRING)
     private SuggestionStatus status;
 
@@ -34,6 +36,14 @@ public class GuestSuggestionEntity {
 
     public String getSuggestionText() {
         return suggestionText;
+    }
+
+    public SuggestionStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(SuggestionStatus status) {
+        this.status = status;
     }
 
     public void setSuggestionText(String suggestionText) {
